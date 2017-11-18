@@ -1,0 +1,13 @@
+<div class="starter-template">
+  <h1>Blog.</h1>
+  <p class="lead">Here you can read about some of my wacky opinons</p>
+</div>
+<div *ngFor="let blogPost of blogPosts" class="container">
+  <br>
+  <a (click)="openFullBlog(blogPost)"><h2>{{blogPost.title}}</h2></a>
+  <p>{{blogPost.date}}</p>
+  <hr>
+  <p id="blog-body" [innerHTML]="blogPost.body"></p>
+  <br>
+  <p><a class="btn btn-secondary" (click)="openFullBlog(blogPost)" role="button">Read More &raquo;</a></p>
+</div>

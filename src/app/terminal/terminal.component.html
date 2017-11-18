@@ -1,0 +1,38 @@
+<div class="jumbotron" id="terminal">
+  <p>{{intro_display}}{{manMe_display}}<img *ngIf="lineNumber === 0" src="../../assets/images/caret2.gif" id="caret" />
+  </p>
+
+  <div *ngIf="lineNumber > 0">
+    <p>
+      <strong class="man-category">Education</strong>
+    </p>
+    <p class="man-content">
+      California State University
+      <br>B.Sc. Computer Science
+    </p>
+    <p>
+      <strong class="man-category">Residence</strong>
+    </p>
+    <p class="man-content">
+      Los Angeles, California
+      <br>United States
+    </p>
+    <p>
+      <strong class="man-category">Skills/Interests</strong>
+    </p>
+    <p class="man-content">
+      C++
+      <br>Angular
+      <br>JavaScript
+      <br>Git
+      <br>Linux/GNU
+    </p>
+    <p>
+      <strong class="man-category">Contact</strong>
+    </p>
+    <p class="man-content">
+      zachscs@gmail.com
+    </p>
+  </div>
+  <p *ngIf="lineNumber>0">guest@zs ~ $ <img *ngIf="lineNumber > 0" src="../../assets/images/caret2.gif" id="caret" /></p>
+</div>

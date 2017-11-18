@@ -1,0 +1,20 @@
+#terminal {
+    background: black;
+    color: green;
+    padding-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+    height: 40em;
+}
+
+#caret {
+    height: 1.3em;
+    margin-top: 0;
+}
+
+.man-category {
+    margin-left: 15px;
+}
+
+.man-content {
+    margin-left: 25px;
+}

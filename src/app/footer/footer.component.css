@@ -1,0 +1,13 @@
+.footer-image {
+    height: 2em;
+    margin-left: 1em;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.jumbotron {
+    height: 2rem;
+}

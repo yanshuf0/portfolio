@@ -1,0 +1,17 @@
+#logo {
+    height: 3rem;
+}
+
+#my-navbar {
+    background: lightgray !important;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.nav-link {
+    color: black !important;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#dropdown01 {
+    cursor: pointer;
+}
