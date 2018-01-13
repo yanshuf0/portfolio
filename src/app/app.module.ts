@@ -38,7 +38,7 @@ import { FirebaseService } from './services/firebase.service';
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'blog', component: BlogComponent},
-      { path: 'blog-post', component: BlogPostComponent},
+      { path: 'blog-post/:title', component: BlogPostComponent},
       { path: '**', redirectTo: 'home' }
   ])
   ],

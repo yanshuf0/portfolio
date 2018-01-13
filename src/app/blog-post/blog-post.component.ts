@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { FirebaseService } from '../services/firebase.service';
+import { Blog } from './../models/blog.model';
 
 @Component({
   selector: 'app-blog-post',
@@ -6,12 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-post.component.css']
 })
 export class BlogPostComponent implements OnInit {
-  blog: any;
+  blog: Blog = {title: '', body: '', date: ''};
+  title: string;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private fireBaseService: FirebaseService) { }
 
   ngOnInit() {
-    this.blog = JSON.parse(localStorage.getItem('blog'));
+    this.title = this.route.snapshot.paramMap.get('title');
+    this.fireBaseService.getBlogs().subscribe(blogs => {
+      this.blog = blogs.filter(blog => blog.title === this.title.replace(/-+/g, ' ').replace(/`+/g, '-'))[0];
+    });
   }
-
 }
