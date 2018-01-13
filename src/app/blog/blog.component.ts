@@ -21,7 +21,7 @@ export class BlogComponent implements OnInit {
   }
 
   openFullBlog (blogPost: Blog) {
-    this.router.navigate(['/blog-post', blogPost.title.replace(/-+/g, '`').replace(/\s+/g, '-')]);
+    this.router.navigate(['/blog-post', blogPost.title.replace(/-+/g, '`').replace(/\s+/g, '-').toLowerCase()]);
   }
 
 }

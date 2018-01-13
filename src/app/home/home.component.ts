@@ -20,6 +20,6 @@ export class HomeComponent implements OnInit {
     }
 
   openFullBlog (blogPost: Blog) {
-    this.router.navigate(['/blog-post', blogPost.title.replace(/-+/g, '`').replace(/\s+/g, '-')]);
+    this.router.navigate(['/blog-post', blogPost.title.replace(/-+/g, '`').replace(/\s+/g, '-').toLowerCase()]);
   }
 }

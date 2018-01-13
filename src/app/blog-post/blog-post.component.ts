@@ -17,7 +17,7 @@ export class BlogPostComponent implements OnInit {
   ngOnInit() {
     this.title = this.route.snapshot.paramMap.get('title');
     this.fireBaseService.getBlogs().subscribe(blogs => {
-      this.blog = blogs.filter(blog => blog.title === this.title.replace(/-+/g, ' ').replace(/`+/g, '-'))[0];
+      this.blog = blogs.filter(blog => blog.title.toLowerCase() === this.title.replace(/-+/g, ' ').replace(/`+/g, '-'))[0];
     });
   }
 }
